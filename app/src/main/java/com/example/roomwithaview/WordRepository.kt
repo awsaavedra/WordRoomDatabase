@@ -13,6 +13,7 @@ class WordRepository(private val wordDao: WordDao) {
 
     // The suspend modifier tells the compiler that this must be called from a
     // coroutine or another suspend function.
+    // https://kotlinlang.org/docs/reference/coroutines-overview.html#coroutines-for-asynchronous-programming-and-more
     suspend fun insert(word: Word) {
         wordDao.insert(word)
     }
